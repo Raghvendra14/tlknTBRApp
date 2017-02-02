@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -96,7 +97,12 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
 
         holder.mTextView.setText(nameList.get(position));
         holder.mImageButton.setContentDescription(holder.mTextView.getText());
-
+        holder.mImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, holder.mTextView.getText() + " has been clicked!", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
