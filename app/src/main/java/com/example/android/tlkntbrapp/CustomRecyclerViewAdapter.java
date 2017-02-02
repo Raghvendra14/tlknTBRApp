@@ -9,12 +9,13 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
 import java.util.HashMap;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by Raghvendra on 02-02-2017.
@@ -32,15 +33,16 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageButton mImageButton;
+        public CircleImageView mImageButton;
         public TextView mTextView;
         public CardView mCardView;
 
         public ViewHolder(View view) {
             super(view);
-            mImageButton = (ImageButton) view.findViewById(R.id.contact_icon);
+            mImageButton = (CircleImageView) view.findViewById(R.id.contact_icon);
             mTextView = (TextView) view.findViewById(R.id.contact_name);
-            mCardView = (CardView) view.findViewById(R.id.cardview);
+//            mCardView = (CardView) view.findViewById(R.id.cardview);
+
         }
     }
 
@@ -58,7 +60,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         int rightMargin = 0;
         int topMargin = 0;
         int bottomMargin = 0;
-        ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) holder.mCardView.getLayoutParams();
+        ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) holder.mImageButton.getLayoutParams();
         if (((position + 1) % 4) == 1) {
             leftMargin = 24;
             topMargin = 8;
