@@ -3,4 +3,14 @@
     <dimen name="image_width">180dp</dimen>
     <dimen name="image_height">180dp</dimen>
     <dimen name="image_corner">90dp</dimen>
+
+    <!-- Margins-->
+    <integer name="margin_bottom">8</integer>
+    <integer name="one_left_right_margin">40</integer>
+    <integer name="one_three_top_margin">16</integer>
+    <integer name="two_three_left_margin">72</integer>
+    <integer name="two_three_right_margin">32</integer>
+    <integer name="two_four_top_margin">72</integer>
+    <integer name="four_left_margin">36</integer>
+    <integer name="four_right_margin">46</integer>
 </resources>
