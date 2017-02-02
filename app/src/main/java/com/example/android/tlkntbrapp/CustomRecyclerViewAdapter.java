@@ -61,24 +61,24 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         int leftMargin = 0;
         int rightMargin = 0;
         int topMargin = 0;
-        int bottomMargin = 4;
+        int bottomMargin = mContext.getResources().getInteger(R.integer.margin_bottom);
         ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) holder.mImageButton.getLayoutParams();
         if (((position + 1) % 4) == 1) {
-            leftMargin = 24;
-            topMargin = 8;
-            rightMargin = 24;
+            leftMargin = mContext.getResources().getInteger(R.integer.one_left_right_margin);
+            topMargin = mContext.getResources().getInteger(R.integer.one_three_top_margin);
+            rightMargin = mContext.getResources().getInteger(R.integer.one_left_right_margin);
         } else if (((position + 1) % 4) == 2) {
-            leftMargin = 32;
-            topMargin = 40;
-            rightMargin = 16;
+            leftMargin = mContext.getResources().getInteger(R.integer.two_three_left_margin);
+            topMargin = mContext.getResources().getInteger(R.integer.two_four_top_margin);
+            rightMargin = mContext.getResources().getInteger(R.integer.two_three_right_margin);
         } else if (((position + 1) % 4) == 3) {
-            leftMargin = 32;
-            topMargin = 8;
-            rightMargin = 16;
+            leftMargin = mContext.getResources().getInteger(R.integer.two_three_left_margin);
+            topMargin = mContext.getResources().getInteger(R.integer.one_three_top_margin);
+            rightMargin = mContext.getResources().getInteger(R.integer.two_three_right_margin);
         } else if (((position + 1) % 4) == 0) {
-            leftMargin = 20;
-            topMargin = 40;
-            rightMargin = 30;
+            leftMargin = mContext.getResources().getInteger(R.integer.four_left_margin);
+            topMargin = mContext.getResources().getInteger(R.integer.two_four_top_margin);
+            rightMargin = mContext.getResources().getInteger(R.integer.four_right_margin);
         }
         params.setMargins(convertdptopx(leftMargin), convertdptopx(topMargin), convertdptopx(rightMargin), convertdptopx(bottomMargin));
 //        Log.d("Hello", "message is " + picUrlList.get(position));

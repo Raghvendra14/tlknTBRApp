@@ -5,7 +5,17 @@
     <dimen name="fab_margin">16dp</dimen>
     <integer name="column_count">2</integer>
 
-    <dimen name="card_width">120dp</dimen>
-    <dimen name="card_height">120dp</dimen>
-    <dimen name="card_corner">60dp</dimen>
+    <dimen name="image_width">120dp</dimen>
+    <dimen name="image_height">120dp</dimen>
+    <!--<dimen name="image_corner">60dp</dimen>-->
+
+    <!-- Margins-->
+    <integer name="margin_bottom">4</integer>
+    <integer name="one_left_right_margin">24</integer>
+    <integer name="one_three_top_margin">8</integer>
+    <integer name="two_three_left_margin">32</integer>
+    <integer name="two_three_right_margin">16</integer>
+    <integer name="two_four_top_margin">40</integer>
+    <integer name="four_left_margin">20</integer>
+    <integer name="four_right_margin">30</integer>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="card_width">180dp</dimen>
-    <dimen name="card_height">180dp</dimen>
-    <dimen name="card_corner">90dp</dimen>
+    <dimen name="image_width">180dp</dimen>
+    <dimen name="image_height">180dp</dimen>
+    <dimen name="image_corner">90dp</dimen>
 </resources>
