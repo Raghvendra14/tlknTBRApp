@@ -59,7 +59,7 @@ public class MainActivityFragment extends Fragment {
 
         HashMap<Integer, String> nameHashMap = createHashMap(nameArray);
 
-        String[] contactPicUrl = {
+        String[] contactPicUrlArray = {
                 "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRBmKbZRg4FvID3DYpGDTBfwxrVvt8czv_AgztG5o1IRv5o3G2V",
                 "http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/natural_world_2011/bp1.jpg",
                 "http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/natural_world_2011/bp3.jpg",
@@ -87,7 +87,7 @@ public class MainActivityFragment extends Fragment {
                 "http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/natural_world_2011/bp21.jpg"
         };
 
-        HashMap<Integer, String> thumbnailHashMap = createHashMap(contactPicUrl);
+        HashMap<Integer, String> thumbnailHashMap = createHashMap(contactPicUrlArray);
 
         CustomRecyclerViewAdapter customRecyclerViewAdapter = new CustomRecyclerViewAdapter(getActivity(), nameHashMap, thumbnailHashMap);
         recyclerView.setAdapter(customRecyclerViewAdapter);
