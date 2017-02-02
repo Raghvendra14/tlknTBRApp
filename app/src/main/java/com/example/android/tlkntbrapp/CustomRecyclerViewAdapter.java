@@ -59,28 +59,24 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         int leftMargin = 0;
         int rightMargin = 0;
         int topMargin = 0;
-        int bottomMargin = 0;
+        int bottomMargin = 4;
         ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) holder.mImageButton.getLayoutParams();
         if (((position + 1) % 4) == 1) {
             leftMargin = 24;
             topMargin = 8;
             rightMargin = 24;
-            bottomMargin = 4;
         } else if (((position + 1) % 4) == 2) {
             leftMargin = 32;
             topMargin = 40;
             rightMargin = 16;
-            bottomMargin = 4;
         } else if (((position + 1) % 4) == 3) {
             leftMargin = 32;
             topMargin = 8;
             rightMargin = 16;
-            bottomMargin = 4;
         } else if (((position + 1) % 4) == 0) {
             leftMargin = 20;
             topMargin = 40;
             rightMargin = 30;
-            bottomMargin = 4;
         }
         params.setMargins(convertdptopx(leftMargin), convertdptopx(topMargin), convertdptopx(rightMargin), convertdptopx(bottomMargin));
 //        Log.d("Hello", "message is " + picUrlList.get(position));
