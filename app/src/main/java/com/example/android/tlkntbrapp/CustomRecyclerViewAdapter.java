@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.util.HashMap;
 
@@ -92,6 +93,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         Glide.with(mContext)
                 .load(thumbnailUri)
                 .error(R.drawable.contact_icon)
+                .diskCacheStrategy(DiskCacheStrategy.RESULT)
                 .crossFade()
                 .into(holder.mImageButton);
 

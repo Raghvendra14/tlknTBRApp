@@ -28,9 +28,9 @@
 
     <TextView
         android:id="@+id/contact_name"
+        style="@style/TextTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
         android:fontFamily="sans-serif-condensed"
         android:layout_below="@+id/contact_icon"
         android:layout_centerHorizontal="true"
