@@ -1,8 +1,11 @@
 package com.example.android.tlkntbrapp;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.net.Uri;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,11 +34,13 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public ImageButton mImageButton;
         public TextView mTextView;
+        public CardView mCardView;
 
         public ViewHolder(View view) {
             super(view);
             mImageButton = (ImageButton) view.findViewById(R.id.contact_icon);
             mTextView = (TextView) view.findViewById(R.id.contact_name);
+            mCardView = (CardView) view.findViewById(R.id.cardview);
         }
     }
 
@@ -49,6 +54,33 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
 
+        int leftMargin = 0;
+        int rightMargin = 0;
+        int topMargin = 0;
+        int bottomMargin = 0;
+        ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) holder.mCardView.getLayoutParams();
+        if (((position + 1) % 4) == 1) {
+            leftMargin = 24;
+            topMargin = 8;
+            rightMargin = 24;
+            bottomMargin = 16;
+        } else if (((position + 1) % 4) == 2) {
+            leftMargin = 32;
+            topMargin = 32;
+            rightMargin = 16;
+            bottomMargin = 8;
+        } else if (((position + 1) % 4) == 3) {
+            leftMargin = 32;
+            topMargin = 8;
+            rightMargin = 16;
+            bottomMargin = 16;
+        } else if (((position + 1) % 4) == 0) {
+            leftMargin = 24;
+            topMargin = 32;
+            rightMargin = 24;
+            bottomMargin = 8;
+        }
+        params.setMargins(convertdptopx(leftMargin), convertdptopx(topMargin), convertdptopx(rightMargin), convertdptopx(bottomMargin));
 //        Log.d("Hello", "message is " + picUrlList.get(position));
         Uri thumbnailUri = null;
         try {
@@ -70,5 +102,14 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
     @Override
     public int getItemCount() {
         return nameList.size();
+    }
+
+    public int convertdptopx(int dp) {
+        Resources resources = mContext.getResources();
+        return (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP,
+                dp,
+                resources.getDisplayMetrics()
+        );
     }
 }
