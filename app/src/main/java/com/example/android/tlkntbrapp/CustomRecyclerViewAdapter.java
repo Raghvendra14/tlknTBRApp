@@ -77,9 +77,9 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
             rightMargin = 16;
             bottomMargin = 4;
         } else if (((position + 1) % 4) == 0) {
-            leftMargin = 24;
+            leftMargin = 20;
             topMargin = 40;
-            rightMargin = 24;
+            rightMargin = 30;
             bottomMargin = 4;
         }
         params.setMargins(convertdptopx(leftMargin), convertdptopx(topMargin), convertdptopx(rightMargin), convertdptopx(bottomMargin));
