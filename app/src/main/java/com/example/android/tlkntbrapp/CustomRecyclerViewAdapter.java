@@ -63,22 +63,22 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) holder.mImageButton.getLayoutParams();
         if (((position + 1) % 4) == 1) {
             leftMargin = 24;
-            topMargin = 8;
+            topMargin = 16;
             rightMargin = 24;
-            bottomMargin = 16;
+            bottomMargin = 8;
         } else if (((position + 1) % 4) == 2) {
             leftMargin = 32;
-            topMargin = 32;
+            topMargin = 40;
             rightMargin = 16;
             bottomMargin = 8;
         } else if (((position + 1) % 4) == 3) {
             leftMargin = 32;
-            topMargin = 8;
+            topMargin = 16;
             rightMargin = 16;
-            bottomMargin = 16;
+            bottomMargin = 8;
         } else if (((position + 1) % 4) == 0) {
             leftMargin = 24;
-            topMargin = 32;
+            topMargin = 40;
             rightMargin = 24;
             bottomMargin = 8;
         }
