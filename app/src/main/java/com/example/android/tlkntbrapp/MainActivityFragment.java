@@ -2,8 +2,8 @@ package com.example.android.tlkntbrapp;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,10 +24,10 @@ public class MainActivityFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
         int columnCount = getResources().getInteger(R.integer.column_count);
-        StaggeredGridLayoutManager sglm =
-                new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
+        GridLayoutManager glm =
+                new GridLayoutManager(getActivity(), columnCount);
 
-        recyclerView.setLayoutManager(sglm);
+        recyclerView.setLayoutManager(glm);
 
         String[] nameArray = {
                 "Marilyn Monroe",
@@ -84,7 +84,7 @@ public class MainActivityFragment extends Fragment {
                 "http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/natural_world_2011/bp18.jpg",
                 "http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/natural_world_2011/bp19.jpg",
                 "http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/natural_world_2011/bp20.jpg",
-                
+                "http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/natural_world_2011/bp21.jpg"
         };
 
         HashMap<Integer, String> thumbnailHashMap = createHashMap(contactPicUrl);

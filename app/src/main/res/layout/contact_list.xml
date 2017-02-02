@@ -33,6 +33,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textAppearance="?android:textAppearanceMedium"
-        android:fontFamily="sans-serif-condensed"
-        android:layout_marginBottom="16dp" />
+        android:fontFamily="sans-serif-condensed" />
 </LinearLayout>
