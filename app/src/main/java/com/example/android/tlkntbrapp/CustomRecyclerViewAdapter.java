@@ -97,6 +97,8 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
                 .into(holder.mImageButton);
 
         holder.mTextView.setText(nameList.get(position));
+        holder.mImageButton.setContentDescription(holder.mTextView.getText());
+
     }
 
     @Override
