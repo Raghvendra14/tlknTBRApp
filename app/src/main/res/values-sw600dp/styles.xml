@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="TextTheme" parent="TextAppearance.AppCompat.Large" />
+    <style name="TextTheme" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textSize">32sp</item>
+    </style>
 </resources>

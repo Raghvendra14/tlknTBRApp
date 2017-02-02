@@ -62,6 +62,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         int rightMargin = 0;
         int topMargin = 0;
         int bottomMargin = mContext.getResources().getInteger(R.integer.margin_bottom);
+        int leftPaddingText = 0;
         ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) holder.mImageButton.getLayoutParams();
         if (((position + 1) % 4) == 1) {
             leftMargin = mContext.getResources().getInteger(R.integer.one_left_right_margin);
@@ -71,16 +72,19 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
             leftMargin = mContext.getResources().getInteger(R.integer.two_three_left_margin);
             topMargin = mContext.getResources().getInteger(R.integer.two_four_top_margin);
             rightMargin = mContext.getResources().getInteger(R.integer.two_three_right_margin);
+            leftPaddingText = mContext.getResources().getInteger(R.integer.left_text_padding);
         } else if (((position + 1) % 4) == 3) {
             leftMargin = mContext.getResources().getInteger(R.integer.two_three_left_margin);
             topMargin = mContext.getResources().getInteger(R.integer.one_three_top_margin);
             rightMargin = mContext.getResources().getInteger(R.integer.two_three_right_margin);
+            leftPaddingText = mContext.getResources().getInteger(R.integer.left_text_padding);
         } else if (((position + 1) % 4) == 0) {
             leftMargin = mContext.getResources().getInteger(R.integer.four_left_margin);
             topMargin = mContext.getResources().getInteger(R.integer.two_four_top_margin);
             rightMargin = mContext.getResources().getInteger(R.integer.four_right_margin);
         }
         params.setMargins(convertdptopx(leftMargin), convertdptopx(topMargin), convertdptopx(rightMargin), convertdptopx(bottomMargin));
+        holder.mTextView.setPadding(leftPaddingText, 0, 0, 0);
 //        Log.d("Hello", "message is " + picUrlList.get(position));
         Uri thumbnailUri = null;
         try {
