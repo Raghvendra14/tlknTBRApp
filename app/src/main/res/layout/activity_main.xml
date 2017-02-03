@@ -83,18 +83,27 @@
             android:orientation="horizontal">
             
             <SearchView
+                android:id="@+id/searchview"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="44dp"
                 android:layout_gravity="center"
-                android:layout_weight="4"/>
+                android:layout_weight="3"
+                android:background="@drawable/round_searchview"
+                android:layout_marginTop="@dimen/user_icon_margin_top_bottom"
+                android:layout_marginBottom="@dimen/user_icon_margin_top_bottom"
+                android:iconifiedByDefault="false"
+                android:queryHint="@string/query_hint"
+                android:queryBackground="@android:color/transparent"
+               />
 
             <ImageView
                 android:layout_width="64dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/apps"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_apps_white_36dp"
                 android:layout_weight="0"
                 android:layout_gravity="center"
-                android:background="@drawable/toolbar_dropshadow"/>
+                android:contentDescription="@string/dialer"
+                />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 </android.support.design.widget.CoordinatorLayout>

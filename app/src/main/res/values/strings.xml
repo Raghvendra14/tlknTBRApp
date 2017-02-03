@@ -3,4 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="content_description">Contact Picture</string>
     <string name="user_content">User Picture</string>
+    <string name="query_hint">Search</string>
+    <string name="dialer">Call Dialer</string>
 </resources>
