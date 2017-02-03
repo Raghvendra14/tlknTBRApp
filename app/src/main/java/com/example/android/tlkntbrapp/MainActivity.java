@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
             View shadowView = findViewById(R.id.shadow_view);
             shadowView.setVisibility(View.VISIBLE);
         }
+
     }
 
     @Override
