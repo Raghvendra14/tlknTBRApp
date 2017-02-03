@@ -15,6 +15,7 @@
     <integer name="four_right_margin">46</integer>
     <integer name="left_text_padding">56</integer>
 
+    <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="user_icon_margin_top_bottom">12dp</dimen>
     <dimen name="user_icon_width">64dp</dimen>
     <dimen name="user_icon_height">64dp</dimen>
