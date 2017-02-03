@@ -34,5 +34,7 @@
         android:fontFamily="sans-serif-condensed"
         android:layout_below="@+id/contact_icon"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"/>
+
 </RelativeLayout>

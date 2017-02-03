@@ -19,4 +19,7 @@
     <dimen name="user_icon_margin_top_bottom">12dp</dimen>
     <dimen name="user_icon_width">64dp</dimen>
     <dimen name="user_icon_height">64dp</dimen>
+
+    <dimen name="fragment_margin_bottom">72dp</dimen>
+
 </resources>

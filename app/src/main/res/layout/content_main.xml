@@ -5,6 +5,6 @@
     android:name="com.example.android.tlkntbrapp.MainActivityFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="56dp"
+    android:layout_marginBottom="@dimen/fragment_margin_bottom"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:layout="@layout/fragment_main" />
