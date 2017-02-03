@@ -8,42 +8,55 @@
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
+        style="@style/AppBarTheme"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:stateListAnimator="@animator/appbar_always_elevated">
+        android:layout_height="wrap_content">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_scrollFlags="scroll|enterAlways">
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_collapseMode="parallax">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <RelativeLayout
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    app:layout_collapseMode="parallax">
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/user_icon"
-                        android:layout_width="@dimen/user_icon_width"
-                        android:layout_height="@dimen/user_icon_height"
-                        android:src="@drawable/user_pic"
-                        android:contentDescription="@string/user_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerInParent="true"
-                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                        android:layout_marginTop="@dimen/user_icon_margin_top_bottom"
-                        android:layout_marginBottom="@dimen/user_icon_margin_top_bottom"
-                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                </RelativeLayout>
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/user_icon"
+                            android:layout_width="@dimen/user_icon_width"
+                            android:layout_height="@dimen/user_icon_height"
+                            android:src="@drawable/user_pic"
+                            android:contentDescription="@string/user_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/user_icon_margin_top_bottom"
+                            android:layout_marginBottom="@dimen/user_icon_margin_top_bottom"
+                            />
 
-            </android.support.v7.widget.Toolbar>
+                    </RelativeLayout>
 
+                </android.support.v7.widget.Toolbar>
+
+                <View
+                    android:id="@+id/shadow_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/toolbar_dropshadow"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
