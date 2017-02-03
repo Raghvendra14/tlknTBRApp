@@ -21,5 +21,7 @@
     <integer name="left_text_padding">56</integer>
 
     <dimen name="user_icon_margin_top_bottom">6dp</dimen>
+    <dimen name="user_icon_width">52dp</dimen>
+    <dimen name="user_icon_height">52dp</dimen>
 
 </resources>

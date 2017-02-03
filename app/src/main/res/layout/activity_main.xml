@@ -29,9 +29,9 @@
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/user_icon"
-                        android:layout_width="52dp"
-                        android:layout_height="52dp"
-                        android:src="@drawable/contact_icon"
+                        android:layout_width="@dimen/user_icon_width"
+                        android:layout_height="@dimen/user_icon_height"
+                        android:src="@drawable/user_pic"
                         android:contentDescription="@string/user_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerInParent="true"
