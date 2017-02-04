@@ -9,11 +9,15 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
 
 import java.util.HashMap;
 
@@ -38,13 +42,14 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         public CircleImageView mImageButton;
         public TextView mTextView;
         public CardView mCardView;
+        final public ProgressBar mProgressBar;
 
         public ViewHolder(View view) {
             super(view);
             mImageButton = (CircleImageView) view.findViewById(R.id.contact_icon);
             mTextView = (TextView) view.findViewById(R.id.contact_name);
 //            mCardView = (CardView) view.findViewById(R.id.cardview);
-
+            mProgressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
         }
     }
 
@@ -64,6 +69,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         int bottomMargin = mContext.getResources().getInteger(R.integer.margin_bottom);
         int leftPaddingText = 0;
         ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) holder.mImageButton.getLayoutParams();
+        ViewGroup.MarginLayoutParams progressParams = (ViewGroup.MarginLayoutParams) holder.mProgressBar.getLayoutParams();
         if (((position + 1) % 4) == 1) {
             leftMargin = mContext.getResources().getInteger(R.integer.one_left_right_margin);
             topMargin = mContext.getResources().getInteger(R.integer.one_three_top_margin);
@@ -84,6 +90,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
             rightMargin = mContext.getResources().getInteger(R.integer.four_right_margin);
         }
         params.setMargins(convertdptopx(leftMargin), convertdptopx(topMargin), convertdptopx(rightMargin), convertdptopx(bottomMargin));
+        progressParams.setMargins(convertdptopx(leftMargin), convertdptopx(topMargin), convertdptopx(rightMargin), convertdptopx(bottomMargin));
         holder.mTextView.setPadding(convertdptopx(leftPaddingText), 0, 0, 0);
 //        Log.d("Hello", "message is " + picUrlList.get(position));
         Uri thumbnailUri = null;
@@ -97,6 +104,19 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         Glide.with(mContext)
                 .load(thumbnailUri)
                 .error(R.drawable.contact_icon)
+                .listener(new RequestListener<Uri, GlideDrawable>() {
+                    @Override
+                    public boolean onException(Exception e, Uri model, Target<GlideDrawable> target, boolean isFirstResource) {
+                        holder.mProgressBar.setVisibility(View.GONE);
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onResourceReady(GlideDrawable resource, Uri model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                        holder.mProgressBar.setVisibility(View.GONE);
+                        return false;
+                    }
+                })
                 .diskCacheStrategy(DiskCacheStrategy.RESULT)
                 .crossFade()
                 .into(holder.mImageButton);
