@@ -7,7 +7,6 @@
 
     <dimen name="image_width">110dp</dimen>
     <dimen name="image_height">110dp</dimen>
-    <!--<dimen name="image_corner">60dp</dimen>-->
 
     <!-- Margins-->
     <integer name="margin_bottom">1</integer>

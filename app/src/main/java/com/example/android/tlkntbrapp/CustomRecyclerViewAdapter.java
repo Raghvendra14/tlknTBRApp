@@ -3,7 +3,6 @@ package com.example.android.tlkntbrapp;
 import android.content.Context;
 import android.content.res.Resources;
 import android.net.Uri;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -41,14 +40,12 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public CircleImageView mImageButton;
         public TextView mTextView;
-        public CardView mCardView;
         final public ProgressBar mProgressBar;
 
         public ViewHolder(View view) {
             super(view);
             mImageButton = (CircleImageView) view.findViewById(R.id.contact_icon);
             mTextView = (TextView) view.findViewById(R.id.contact_name);
-//            mCardView = (CardView) view.findViewById(R.id.cardview);
             mProgressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
         }
     }
@@ -92,15 +89,14 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         params.setMargins(convertdptopx(leftMargin), convertdptopx(topMargin), convertdptopx(rightMargin), convertdptopx(bottomMargin));
         progressParams.setMargins(convertdptopx(leftMargin), convertdptopx(topMargin), convertdptopx(rightMargin), convertdptopx(bottomMargin));
         holder.mTextView.setPadding(convertdptopx(leftPaddingText), 0, 0, 0);
-//        Log.d("Hello", "message is " + picUrlList.get(position));
+
         Uri thumbnailUri = null;
         try {
             thumbnailUri = Uri.parse(picUrlList.get(position));
-//            Log.d("Hello Thumbnail", thumbnailUri.toString());
         } catch (Exception e) {
             e.printStackTrace();
-//            Log.e(CustomRecyclerViewAdapter.class.getSimpleName(), "Cannot able to parse" + picUrlList.get(position) + " " + position);
         }
+
         Glide.with(mContext)
                 .load(thumbnailUri)
                 .error(R.drawable.contact_icon)
