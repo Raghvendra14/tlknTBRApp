@@ -5,22 +5,26 @@
     <dimen name="fab_margin">16dp</dimen>
     <integer name="column_count">2</integer>
 
-    <dimen name="image_width">120dp</dimen>
-    <dimen name="image_height">120dp</dimen>
+    <dimen name="image_width">110dp</dimen>
+    <dimen name="image_height">110dp</dimen>
     <!--<dimen name="image_corner">60dp</dimen>-->
 
     <!-- Margins-->
-    <integer name="margin_bottom">4</integer>
+    <integer name="margin_bottom">1</integer>
     <integer name="one_left_right_margin">24</integer>
-    <integer name="one_three_top_margin">8</integer>
-    <integer name="two_three_left_margin">40</integer>
-    <integer name="two_three_right_margin">16</integer>
-    <integer name="two_four_top_margin">40</integer>
-    <integer name="four_left_margin">20</integer>
-    <integer name="four_right_margin">30</integer>
-    <integer name="left_text_padding">56</integer>
+    <integer name="one_three_top_margin">4</integer>
+    <integer name="two_left_margin">54</integer>
+    <integer name="two_right_margin">2</integer>
+    <integer name="three_left_margin">40</integer>
+    <integer name="three_right_margin">16</integer>
+    <integer name="two_four_top_margin">44</integer>
+    <integer name="four_left_margin">24</integer>
+    <integer name="four_right_margin">26</integer>
 
-    <dimen name="user_icon_margin_top_bottom">6dp</dimen>
+    <integer name="two_left_text_padding">56</integer>
+    <integer name="three_left_text_padding">30</integer>
+
+    <dimen name="user_icon_margin_top_bottom">4dp</dimen>
     <dimen name="user_icon_width">52dp</dimen>
     <dimen name="user_icon_height">52dp</dimen>
 
