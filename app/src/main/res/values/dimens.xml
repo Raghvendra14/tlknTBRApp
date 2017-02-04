@@ -29,4 +29,8 @@
 
     <dimen name="fragment_margin_bottom">56dp</dimen>
 
+    <dimen name="dialer_icon_width">48dp</dimen>
+
+    <dimen name="search_view_height">44dp</dimen>
+
 </resources>

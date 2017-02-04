@@ -78,7 +78,7 @@
             <SearchView
                 android:id="@+id/searchview"
                 android:layout_width="0dp"
-                android:layout_height="44dp"
+                android:layout_height="@dimen/search_view_height"
                 android:layout_gravity="center"
                 android:layout_weight="3"
                 android:background="@drawable/round_searchview"
@@ -91,12 +91,15 @@
 
             <ImageView
                 android:id="@+id/dialer_icon"
-                android:layout_width="64dp"
+                android:layout_width="@dimen/dialer_icon_width"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_apps_white_36dp"
                 android:layout_weight="0"
                 android:layout_gravity="center"
                 android:contentDescription="@string/dialer"
+                android:background="@drawable/touch_selector"
+                android:layout_marginStart="@dimen/user_icon_margin_top_bottom"
+                android:layout_marginEnd="@dimen/user_icon_margin_top_bottom"
                 />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
