@@ -41,5 +41,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        if (!Utils.isNetworkAvailable(context)) {
+            Toast.makeText(context, R.string.connection_required, Toast.LENGTH_SHORT).show();
+        }
     }
 }
