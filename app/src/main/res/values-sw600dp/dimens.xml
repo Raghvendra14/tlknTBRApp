@@ -2,7 +2,6 @@
 <resources>
     <dimen name="image_width">180dp</dimen>
     <dimen name="image_height">180dp</dimen>
-    <dimen name="image_corner">90dp</dimen>
 
     <!-- Margins-->
     <integer name="margin_bottom">8</integer>
