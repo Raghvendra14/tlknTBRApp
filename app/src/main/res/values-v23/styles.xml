@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <style name="AppTheme.NoActionBar">
@@ -5,10 +6,7 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <!-- Status bar color-->
-        <item name="android:statusBarColor">@android:color/transparent</item>
-    </style>
-
-    <style name="AppBarTheme">
-        <item name="android:stateListAnimator">@animator/appbar_always_elevated</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 </resources>
