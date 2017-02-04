@@ -93,7 +93,7 @@
                 android:id="@+id/dialer_icon"
                 android:layout_width="@dimen/dialer_icon_width"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_apps_white_36dp"
+                android:src="@drawable/ic_apps_grey600_36dp"
                 android:layout_weight="0"
                 android:layout_gravity="center"
                 android:contentDescription="@string/dialer"
